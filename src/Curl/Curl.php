@@ -39,7 +39,7 @@ class Curl
     public $errorCallback = null;
     public $completeCallback = null;
     public $fileHandle = null;
-    private $downloadFileName = null;
+    public $downloadFileName = null;
 
     public $attempts = 0;
     public $retries = 0;
@@ -50,15 +50,15 @@ class Curl
     public $jsonDecoder = null;
     public $xmlDecoder = null;
 
-    private $cookies = array();
-    private $headers = array();
-    private $options = array();
+    public $cookies = array();
+    public $headers = array();
+    public $options = array();
 
-    private $jsonDecoderArgs = array();
-    private $jsonPattern = '/^(?:application|text)\/(?:[a-z]+(?:[\.-][0-9a-z]+){0,}[\+\.]|x-)?json(?:-[a-z]+)?/i';
-    private $xmlDecoderArgs = array();
-    private $xmlPattern = '~^(?:text/|application/(?:atom\+|rss\+|soap\+)?)xml~i';
-    private $defaultDecoder = null;
+    public $jsonDecoderArgs = array();
+    public $jsonPattern = '/^(?:application|text)\/(?:[a-z]+(?:[\.-][0-9a-z]+){0,}[\+\.]|x-)?json(?:-[a-z]+)?/i';
+    public $xmlDecoderArgs = array();
+    public $xmlPattern = '~^(?:text/|application/(?:atom\+|rss\+|soap\+)?)xml~i';
+    public $defaultDecoder = null;
 
     public static $RFC2616 = array(
         // RFC 2616: "any CHAR except CTLs or separators".
@@ -93,7 +93,7 @@ class Curl
         's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '{', '|', '}', '~',
     );
 
-    private static $deferredProperties = array(
+    public static $deferredProperties = array(
         'effectiveUrl',
         'rfc2616',
         'rfc6265',
@@ -1482,9 +1482,9 @@ class Curl
     /**
      * Get Effective Url
      *
-     * @access private
+     * @access public
      */
-    private function __get_effectiveUrl()
+    public function __get_effectiveUrl()
     {
         return $this->getInfo(CURLINFO_EFFECTIVE_URL);
     }
@@ -1492,9 +1492,9 @@ class Curl
     /**
      * Get RFC 2616
      *
-     * @access private
+     * @access public
      */
-    private function __get_rfc2616()
+    public function __get_rfc2616()
     {
         return array_fill_keys(self::$RFC2616, true);
     }
@@ -1502,9 +1502,9 @@ class Curl
     /**
      * Get RFC 6265
      *
-     * @access private
+     * @access public
      */
-    private function __get_rfc6265()
+    public function __get_rfc6265()
     {
         return array_fill_keys(self::$RFC6265, true);
     }
@@ -1512,9 +1512,9 @@ class Curl
     /**
      * Get Total Time
      *
-     * @access private
+     * @access public
      */
-    private function __get_totalTime()
+    public function __get_totalTime()
     {
         return $this->getInfo(CURLINFO_TOTAL_TIME);
     }
@@ -1522,9 +1522,9 @@ class Curl
     /**
      * Build Cookies
      *
-     * @access private
+     * @access public
      */
-    private function buildCookies()
+    public function buildCookies()
     {
         // Avoid using http_build_query() as unnecessary encoding is performed.
         // http_build_query($this->cookies, '', '; ');
@@ -1536,13 +1536,13 @@ class Curl
     /**
      * Build Url
      *
-     * @access private
+     * @access public
      * @param  $url
      * @param  $mixed_data
      *
      * @return string
      */
-    private function buildUrl($url, $mixed_data = '')
+    public function buildUrl($url, $mixed_data = '')
     {
         $query_string = '';
         if (!empty($mixed_data)) {
@@ -1559,10 +1559,10 @@ class Curl
     /**
      * Download Complete
      *
-     * @access private
+     * @access public
      * @param  $fh
      */
-    private function downloadComplete($fh)
+    public function downloadComplete($fh)
     {
         if ($this->error && is_file($this->downloadFileName)) {
             @unlink($this->downloadFileName);
@@ -1596,12 +1596,12 @@ class Curl
     /**
      * Parse Headers
      *
-     * @access private
+     * @access public
      * @param  $raw_headers
      *
      * @return array
      */
-    private function parseHeaders($raw_headers)
+    public function parseHeaders($raw_headers)
     {
         $raw_headers = preg_split('/\r\n/', $raw_headers, null, PREG_SPLIT_NO_EMPTY);
         $http_headers = new CaseInsensitiveArray();
@@ -1627,12 +1627,12 @@ class Curl
     /**
      * Parse Request Headers
      *
-     * @access private
+     * @access public
      * @param  $raw_headers
      *
      * @return \Curl\CaseInsensitiveArray
      */
-    private function parseRequestHeaders($raw_headers)
+    public function parseRequestHeaders($raw_headers)
     {
         $request_headers = new CaseInsensitiveArray();
         list($first_line, $headers) = $this->parseHeaders($raw_headers);
@@ -1646,7 +1646,7 @@ class Curl
     /**
      * Parse Response
      *
-     * @access private
+     * @access public
      * @param  $response_headers
      * @param  $raw_response
      *
@@ -1660,7 +1660,7 @@ class Curl
      *   If the response content-type cannot be determined:
      *     Returns the original raw response.
      */
-    private function parseResponse($response_headers, $raw_response)
+    public function parseResponse($response_headers, $raw_response)
     {
         $response = $raw_response;
         if (isset($response_headers['Content-Type'])) {
@@ -1689,12 +1689,12 @@ class Curl
     /**
      * Parse Response Headers
      *
-     * @access private
+     * @access public
      * @param  $raw_response_headers
      *
      * @return \Curl\CaseInsensitiveArray
      */
-    private function parseResponseHeaders($raw_response_headers)
+    public function parseResponseHeaders($raw_response_headers)
     {
         $response_header_array = explode("\r\n\r\n", $raw_response_headers);
         $response_header  = '';
@@ -1717,11 +1717,11 @@ class Curl
     /**
      * Set Encoded Cookie
      *
-     * @access private
+     * @access public
      * @param  $key
      * @param  $value
      */
-    private function setEncodedCookie($key, $value)
+    public function setEncodedCookie($key, $value)
     {
         $name_chars = array();
         foreach (str_split($key) as $name_char) {
@@ -1747,10 +1747,10 @@ class Curl
     /**
      * Initialize
      *
-     * @access private
+     * @access public
      * @param  $base_url
      */
-    private function initialize($base_url = null)
+    public function initialize($base_url = null)
     {
         $this->id = uniqid('', true);
         $this->setDefaultUserAgent();

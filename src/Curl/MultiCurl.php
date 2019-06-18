@@ -9,26 +9,26 @@ class MultiCurl
     public $baseUrl = null;
     public $multiCurl;
 
-    private $curls = array();
-    private $activeCurls = array();
-    private $isStarted = false;
-    private $concurrency = 25;
-    private $nextCurlId = 0;
+    public $curls = array();
+    public $activeCurls = array();
+    public $isStarted = false;
+    public $concurrency = 25;
+    public $nextCurlId = 0;
 
-    private $beforeSendCallback = null;
-    private $successCallback = null;
-    private $errorCallback = null;
-    private $completeCallback = null;
+    public $beforeSendCallback = null;
+    public $successCallback = null;
+    public $errorCallback = null;
+    public $completeCallback = null;
 
-    private $retry = null;
+    public $retry = null;
 
-    private $cookies = array();
-    private $headers = array();
-    private $options = array();
-    private $proxies = null;
+    public $cookies = array();
+    public $headers = array();
+    public $options = array();
+    public $proxies = null;
 
-    private $jsonDecoder = null;
-    private $xmlDecoder = null;
+    public $jsonDecoder = null;
+    public $xmlDecoder = null;
 
     /**
      * Construct
@@ -889,9 +889,9 @@ class MultiCurl
     /**
      * Update Headers
      *
-     * @access private
+     * @access public
      */
-    private function updateHeaders()
+    public function updateHeaders()
     {
         foreach ($this->curls as $curl) {
             $curl->setHeaders($this->headers);
@@ -901,10 +901,10 @@ class MultiCurl
     /**
      * Queue Handle
      *
-     * @access private
+     * @access public
      * @param  $curl
      */
-    private function queueHandle($curl)
+    public function queueHandle($curl)
     {
         // Use sequential ids to allow for ordered post processing.
         $curl->id = $this->nextCurlId++;
@@ -917,11 +917,11 @@ class MultiCurl
     /**
      * Init Handle
      *
-     * @access private
+     * @access public
      * @param  $curl
      * @throws \ErrorException
      */
-    private function initHandle($curl)
+    public function initHandle($curl)
     {
         // Set callbacks if not already individually set.
         if ($curl->beforeSendCallback === null) {

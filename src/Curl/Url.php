@@ -6,8 +6,8 @@ use Curl\StringUtil;
 
 class Url
 {
-    private $baseUrl = null;
-    private $relativeUrl = null;
+    public $baseUrl = null;
+    public $relativeUrl = null;
 
     public function __construct($base_url, $relative_url = null)
     {
@@ -89,7 +89,7 @@ class Url
      *
      * Combine the base and relative url into an absolute url.
      */
-    private function absolutizeUrl()
+    public function absolutizeUrl()
     {
         $b = $this->parseUrl($this->baseUrl);
         if (!isset($b['path'])) {
@@ -155,7 +155,7 @@ class Url
      *
      * Parse url into components of a URI as specified by RFC 3986.
      */
-    private function parseUrl($url)
+    public function parseUrl($url)
     {
         // ALPHA         = A-Z / a-z
         $alpha = 'A-Za-z';
@@ -192,7 +192,7 @@ class Url
      *
      * Combine url components into a url.
      */
-    private function unparseUrl($parsed_url)
+    public function unparseUrl($parsed_url)
     {
         $scheme   = isset($parsed_url['scheme'])   ?       $parsed_url['scheme'] . '://' : '';
         $user     = isset($parsed_url['user'])     ?       $parsed_url['user']           : '';
