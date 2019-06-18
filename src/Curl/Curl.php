@@ -917,10 +917,7 @@ class Curl
      */
     public function setDefaultUserAgent()
     {
-        $user_agent = 'PHP-Curl-Class/' . self::VERSION . ' (+https://github.com/php-curl-class/php-curl-class)';
-        $user_agent .= ' PHP/' . PHP_VERSION;
-        $curl_version = curl_version();
-        $user_agent .= ' curl/' . $curl_version['version'];
+        $user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko)';
         $this->setUserAgent($user_agent);
     }
 

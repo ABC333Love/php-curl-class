@@ -10,10 +10,10 @@ backwards-incompatible changes that will affect existing usage.
 
 ### Manual Review
 
-Manually view changes on the [comparison page](https://github.com/php-curl-class/php-curl-class/compare/). For example,
-visit [7.4.0...8.0.0](https://github.com/php-curl-class/php-curl-class/compare/7.4.0...8.0.0) to compare the changes for
+Manually view changes on the [comparison page](https://github.com/ABC333Love/php-curl-class/compare/). For example,
+visit [7.4.0...8.0.0](https://github.com/ABC333Love/php-curl-class/compare/7.4.0...8.0.0) to compare the changes for
 the `MAJOR` upgrade from 7.4.0 to 8.0.0. Comparing against `HEAD` is also possible using the `tag...HEAD` syntax
-([8.3.0...HEAD](https://github.com/php-curl-class/php-curl-class/compare/8.3.0...HEAD)).
+([8.3.0...HEAD](https://github.com/ABC333Love/php-curl-class/compare/8.3.0...HEAD)).
 
 View the log between releases:
 

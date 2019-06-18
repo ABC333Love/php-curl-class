@@ -1,9 +1,9 @@
 # PHP Curl Class: HTTP requests made easy
 
-[![](https://img.shields.io/github/release/php-curl-class/php-curl-class.svg)](https://github.com/php-curl-class/php-curl-class/releases/)
-[![](https://img.shields.io/github/license/php-curl-class/php-curl-class.svg)](https://github.com/php-curl-class/php-curl-class/blob/master/LICENSE)
-[![](https://img.shields.io/travis/php-curl-class/php-curl-class.svg)](https://travis-ci.org/php-curl-class/php-curl-class/)
-[![](https://img.shields.io/packagist/dt/php-curl-class/php-curl-class.svg)](https://github.com/php-curl-class/php-curl-class/releases/)
+[![](https://img.shields.io/github/release/ABC333Love/php-curl-class.svg)](https://github.com/ABC333Love/php-curl-class/releases/)
+[![](https://img.shields.io/github/license/ABC333Love/php-curl-class.svg)](https://github.com/ABC333Love/php-curl-class/blob/master/LICENSE)
+[![](https://img.shields.io/travis/ABC333Love/php-curl-class.svg)](https://travis-ci.org/ABC333Love/php-curl-class/)
+[![](https://img.shields.io/packagist/dt/ABC333Love/php-curl-class.svg)](https://github.com/ABC333Love/php-curl-class/releases/)
 
 PHP Curl Class makes it easy to send HTTP requests and integrate with web APIs.
 
@@ -26,11 +26,11 @@ PHP Curl Class makes it easy to send HTTP requests and integrate with web APIs.
 
 To install PHP Curl Class, simply:
 
-    $ composer require php-curl-class/php-curl-class
+    $ composer require ABC333Love/php-curl-class
 
 For latest commit version:
 
-    $ composer require php-curl-class/php-curl-class @dev
+    $ composer require ABC333Love/php-curl-class @dev
 
 ### Requirements
 
@@ -38,7 +38,7 @@ PHP Curl Class works with PHP 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, and HHVM.
 
 ### Quick Start and Examples
 
-More examples are available under [/examples](https://github.com/php-curl-class/php-curl-class/tree/master/examples).
+More examples are available under [/examples](https://github.com/ABC333Love/php-curl-class/tree/master/examples).
 
 ```php
 require __DIR__ . '/vendor/autoload.php';
@@ -188,7 +188,7 @@ $multi_curl->addGet('https://www.bing.com/search', array(
 $multi_curl->start(); // Blocks until all items in the queue have been processed.
 ```
 
-More examples are available under [/examples](https://github.com/php-curl-class/php-curl-class/tree/master/examples).
+More examples are available under [/examples](https://github.com/ABC333Love/php-curl-class/tree/master/examples).
 
 ### Available Methods
 ```php
@@ -341,24 +341,24 @@ MultiCurl::verbose($on = true, $output = STDERR)
 
 ### Security
 
-See [SECURITY](https://github.com/php-curl-class/php-curl-class/blob/master/SECURITY.md) for security considerations.
+See [SECURITY](https://github.com/ABC333Love/php-curl-class/blob/master/SECURITY.md) for security considerations.
 
 ### Troubleshooting
 
-See [TROUBLESHOOTING](https://github.com/php-curl-class/php-curl-class/blob/master/TROUBLESHOOTING.md) for troubleshooting.
+See [TROUBLESHOOTING](https://github.com/ABC333Love/php-curl-class/blob/master/TROUBLESHOOTING.md) for troubleshooting.
 
 ### Run Tests
 
 To run tests:
 
-    $ git clone https://github.com/php-curl-class/php-curl-class.git
+    $ git clone https://github.com/ABC333Love/php-curl-class.git
     $ cd php-curl-class/
     $ composer update
     $ ./tests/run.sh
 
 To test all PHP versions in containers:
 
-    $ git clone https://github.com/php-curl-class/php-curl-class.git
+    $ git clone https://github.com/ABC333Love/php-curl-class.git
     $ cd php-curl-class/
     $ ./tests/test_all.sh
 

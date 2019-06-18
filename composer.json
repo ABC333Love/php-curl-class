@@ -1,7 +1,7 @@
 {
-    "name": "php-curl-class/php-curl-class",
+    "name": "ABC333Love/php-curl-class",
     "description": "PHP Curl Class makes it easy to send HTTP requests and integrate with web APIs.",
-    "homepage": "https://github.com/php-curl-class/php-curl-class",
+    "homepage": "https://github.com/ABC333Love/php-curl-class",
     "license": "Unlicense",
     "keywords": [
         "php", "curl", "class", "api", "api-client", "client", "framework", "http", "http-client", "http-proxy", "json",
@@ -10,7 +10,7 @@
     ],
     "authors": [
         {
-            "name": "Zach Borboa"
+            "name": "ABC333Love"
         }
     ],
     "require": {
