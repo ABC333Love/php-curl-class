@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
 
-use \Curl\Curl;
+use \ABC333Love\Curl\Curl;
 
 const MAILCHIMP_API_KEY = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-XXX';
 $parts = explode('-', MAILCHIMP_API_KEY);

@@ -1,6 +1,6 @@
 <?php
 
-namespace Curl;
+namespace ABC333Love\Curl;
 
 class Decoder
 {

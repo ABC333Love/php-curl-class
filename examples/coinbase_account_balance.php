@@ -1,7 +1,8 @@
 <?php
+
 require __DIR__ . '/../vendor/autoload.php';
 
-use \Curl\Curl;
+use \ABC333Love\Curl\Curl;
 
 const API_KEY = '';
 const API_SECRET = '';

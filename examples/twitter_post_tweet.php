@@ -1,14 +1,14 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
 
-use \Curl\Curl;
+use \ABC333Love\Curl\Curl;
 
 const API_KEY = 'XXXXXXXXXXXXXXXXXXXXXXXXX';
 const API_SECRET = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const OAUTH_ACCESS_TOKEN = 'XXXXXXXX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const OAUTH_TOKEN_SECRET = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
-$status = 'I love php curl class. https://github.com/php-curl-class/php-curl-class';
+$status = 'I love php curl class. https://github.com/abc333love/php-curl-class';
 
 $oauth_data = array(
     'oauth_consumer_key' => API_KEY,

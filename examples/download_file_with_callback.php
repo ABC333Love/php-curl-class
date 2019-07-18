@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
 
-use \Curl\Curl;
+use \ABC333Love\Curl\Curl;
 
 $curl = new Curl();
 $curl->download('https://secure.php.net/images/logos/php-med-trans.png', function ($instance, $tmpfile) {

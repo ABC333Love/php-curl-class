@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
 
-use \Curl\Curl;
+use \ABC333Love\Curl\Curl;
 
 // Retrieve first N pages of search results.
 $pages = 10;

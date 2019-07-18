@@ -1,8 +1,8 @@
 <?php
 
-namespace Curl;
+namespace ABC333Love\Curl;
 
-use Curl\StringUtil;
+use ABC333Love\Curl\StringUtil;
 
 class Url
 {

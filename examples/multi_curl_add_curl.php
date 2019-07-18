@@ -1,8 +1,8 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
 
-use \Curl\Curl;
-use \Curl\MultiCurl;
+use \ABC333Love\Curl\Curl;
+use \ABC333Love\Curl\MultiCurl;
 
 $multi_curl = new MultiCurl();
 $multi_curl->complete(function ($instance) {

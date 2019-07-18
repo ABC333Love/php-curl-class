@@ -1,8 +1,8 @@
 <?php
 
-namespace Curl;
+namespace ABC333Love\Curl;
 
-use Curl\ArrayUtil;
+use ABC333Love\Curl\ArrayUtil;
 
 class MultiCurl
 {

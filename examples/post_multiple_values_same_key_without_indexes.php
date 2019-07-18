@@ -6,7 +6,7 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use \Curl\Curl;
+use \ABC333Love\Curl\Curl;
 
 // curl "https://httpbin.org/post" -d "foo=bar&foo=baz"
 

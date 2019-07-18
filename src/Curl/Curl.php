@@ -1,9 +1,9 @@
 <?php
 
-namespace Curl;
+namespace ABC333Love\Curl;
 
-use Curl\ArrayUtil;
-use Curl\Decoder;
+use ABC333Love\Curl\ArrayUtil;
+use ABC333Love\Curl\Decoder;
 
 class Curl
 {
