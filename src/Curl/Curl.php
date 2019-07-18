@@ -1753,6 +1753,7 @@ class Curl
         $this->setDefaultUserAgent();
         $this->setDefaultTimeout();
         $this->setOpt(CURLINFO_HEADER_OUT, true);
+        $this->setOpt(CURLOPT_VERBOSE, false); //set verbose mode off
 
         // Create a placeholder to temporarily store the header callback data.
         $header_callback_data = new \stdClass();
