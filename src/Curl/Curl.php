@@ -860,7 +860,7 @@ class Curl
      */
     public function setDefaultJsonDecoder()
     {
-        $this->jsonDecoder = '\Curl\Decoder::decodeJson';
+        $this->jsonDecoder = '\ABC333Love\Curl\Decoder::decodeJson';
         $this->jsonDecoderArgs = func_get_args();
     }
 
@@ -875,7 +875,7 @@ class Curl
      */
     public function setDefaultXmlDecoder()
     {
-        $this->xmlDecoder = '\Curl\Decoder::decodeXml';
+        $this->xmlDecoder = '\ABC333Love\Curl\Decoder::decodeXml';
         $this->xmlDecoderArgs = func_get_args();
     }
 
@@ -893,9 +893,9 @@ class Curl
             $this->defaultDecoder = $mixed;
         } else {
             if ($mixed === 'json') {
-                $this->defaultDecoder = '\Curl\Decoder::decodeJson';
+                $this->defaultDecoder = '\ABC333Love\Curl\Decoder::decodeJson';
             } elseif ($mixed === 'xml') {
-                $this->defaultDecoder = '\Curl\Decoder::decodeXml';
+                $this->defaultDecoder = '\ABC333Love\Curl\Decoder::decodeXml';
             }
         }
     }
